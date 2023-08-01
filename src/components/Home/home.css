@@ -1,138 +1,125 @@
-.hero-image {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-image: url('../../assets/Home.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-  }
-  
-  .hero-text h1,
-  .hero-text p,
-  .hero-text button {
-    margin-right: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .hero-text {
-      text-align: center; /* Center align on smaller screens */
-      left: 50%; /* Align to the center horizontally */
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* vertically align items */
-    justify-content: center; /* align items to the center */
-  }
-  
-  .container video {
-    width: 400px; /* adjust the width as needed */
-    margin-left: 20px; /* add margin between the video and text */
-  }
-  
-  .container .text {
-    flex: 1; /* occupy remaining space */
-    padding: 0 20px; /* add padding for spacing */
-  }
-  
-  @media (max-width: 769px) {
-    .container {
-      flex-direction: column; /* stack items vertically on smaller screens */
-      align-items: center; /* center align items */
-    }
-  
-    .container video {
-      max-width: 100%; /* adjust the width as needed */
-      margin: 20px 0; /* add margin between the video and text */
-    }
-    .containerList .listOne{
-        margin-left: 10%;
-    }
-
-    .containerList .listTwo{
-        margin-left: 10%;
-    }
-
-    
-  }
-
-
-  .listOne{
-    flex: 1; /* occupy remaining space */
-    margin-left: 30%;
-    
-  }
-
-
-  .listTwo{
-    flex: 1; /* occupy remaining space */
-    margin-right: 10%;
-  
-  }
-
-  .Music-heading {
-    display: flex;
-    justify-content: center; /* horizontally center the content */
-    align-items: center; /* vertically center the content */
-    height: 10vh; /* set the height of the container to the full viewport height */
-  }
-  
-  .Music-heading h1 {
-    text-align: center; /* center align the text */
-  }
-  
-  @media (max-width: 768px) {
-    .Music-heading {
-      height: auto; /* reset the height for smaller screens */
-      padding: 20px; /* add padding for spacing */
-    }
-  }
-
-
-  .containerList{
-    display: flex;
-    flex-direction: row;
-  }
-  
-  
-  .courses-btn {
-    margin-left: 5%;
-  }
-
-
-  .text_Sobre {
-    margin-top: 5%;
-    text-align: center;
-    justify-content: center;
-    background-color: #EAE5E5;
-  }
-
-
-  /* Add the following CSS to your existing styles */
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.main{
+  background-image: url("../../assets/background.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  color: white;
 }
 
+/* home.css */
 
-.footer{
-margin-top: auto;
+.animation-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  animation: slide-in 1s ease-out; /* Use the correct keyframes 'slide-in' */
+  margin-bottom: 5%;
 }
 
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  width: 50px; /* Adjust the size of the logo as needed */
+  height: auto;
+  margin-right: 1%; /* Add some space between the logo and text */
+  animation: slide-in-text 2s ease-out; /* Use the same animation as the text */
+}
+
+.animated-text {
+  animation: slide-in-text 2s ease-out; /* Keep the existing animation for the text */
+}
+
+@keyframes slide-in-text {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+  
+  @media (max-width: 768px) {
+
+  }
+
+
+ 
 
 
 
+.Menu-button{
+  display: flex;
+  flex-direction: column;
+  margin: 22%;
+
+}
+
+.btn-sign-in{
+  margin-top: 10%;
+}
+
+.btn-video{
+  margin-top: 10%;
+
+}

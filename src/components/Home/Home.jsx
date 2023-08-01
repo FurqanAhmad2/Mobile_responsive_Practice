@@ -1,86 +1,33 @@
-import React from "react";
-import Navbar from '../Navbar/Navbar';
-import clip from "../../assets/clip.mp4"
-import './home.css'; // Import the CSS file for the Home component
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Make sure to import NavLink if you're using React Router
+import Navbar from "../Navbar/Navbar";
+import "./home.css";
 import Footer from "../Footer/Footer";
+import logo from "../../assets/light-bulb.png";
 
 function Home() {
   return (
-    <div>
-      
-    <Navbar />
+    <div className="main">
+      <Navbar/>
 
-    <div className="hero-image">
-      <div className="hero-text">
-        <h1>Cursos de Musica</h1>
-        <p>Descubre el mundo</p>
-        <button type="button" className="courses-btn btn btn-danger rounded rounded-pill">Cursos</button>
+      <h2 className="animated-text" style={{padding: '3%'}}>To-Do-App</h2>
+      <div className="animation-container">
+        <img src={logo} alt="Logo" className="logo" />
+        <div className="animated-text">
+          Welcome to our To-Do App, the perfect tool to help you stay organized and on top of your tasks! Our user-friendly and intuitive app allows you to create and manage your to-do lists with ease.
+        </div>
+       
       </div>
+
+      <div className="Menu-button">
+      <button class="button-50" role="button">Sign UP</button>
+      <button class="button-50 btn-sign-in" role="button">Sign IN</button>
+      <button class="button-50 btn-video" role="button">Embedded Video</button>
+      </div>
+
+      <Footer/>
     </div>
-    <br />
-
-
-    <div className="container">
-
-    <div>
-        <h5>Hello</h5>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.asasa
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.asasa
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.asasa
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.asasa
-        </p>
-
-    </div>
-    <video src={clip} controls autoPlay></video>
-    </div>
-    <div className="Music-heading">
-        <h1 >Discover the Music</h1> 
-    </div>
-
-<div className="containerList">
-    <div className="listOne">
-        <h3>Teoria Musical</h3>
-        <ul>
-        <li>Benefit 1</li>
-        <li>Benefit 2</li>
-        <li>Benefit 3</li>
-        <li>Benefit 4</li>
-        </ul>
-        <button type="button" className="courses-btn btn btn-danger rounded rounded-pill">
-        Explora
-        </button>
-    </div>
-
-    <div className="listTwo" >
-        <h3>Teoria Musical</h3>
-        <ul>
-        <li>Benefit 1</li>
-        <li>Benefit 2</li>
-        <li>Benefit 3</li>
-        <li>Benefit 4</li>
-        </ul>
-        <button type="button" className="courses-btn btn btn-danger rounded rounded-pill">
-        Explora
-        </button>
-    </div>
-
-  </div>
-
-
-  <div className="text_Sobre">
-    <h4>Sobre la profesora </h4>
-    <p>Sonia es una profesora con 10 años de <br/>experiencia en escuelas de todo tipo</p>
-  </div>
-
-
-
-    <div className="footer">
-    <Footer />
-    </div>
- 
-  </div>
-);
+  );
 }
 
 export default Home;
