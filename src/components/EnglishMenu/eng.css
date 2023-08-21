@@ -1,0 +1,55 @@
+.mainCard{
+display: flex;
+flex-direction: column;
+color: black;
+}
+
+.inner-Card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+}
+
+.price-Card{
+    padding: 10%;
+    font-size:xx-large;
+    margin-left: 30%;
+}
+
+
+/* eng.css */
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .menu-card {
+    opacity: 0;
+    animation: slide-in-animation 1s ease-in-out forwards;
+  }
+  
+  @keyframes slide-in-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,49 +1,49 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import logo from "../../assets/light-bulb.png"
-import { Link } from 'react-router-dom';
+import logo from "../../assets/crop.png";
 
-function OffcanvasExample() {
+function BasicExample() {
   return (
-    <>
-      {['lg'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-secondary mb-3">
-          <Container fluid>
-            <Navbar.Brand href="#">
-              <img src={logo} width={100} height={100} alt="Logo" /> {/* Replace with your logo path */}
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-${expand}`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end"
-              
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Patients And Medications
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/">Home</Nav.Link>
-                  <Nav.Link as={Link} to="/signup">Add Patient</Nav.Link>
-                  <Nav.Link as={Link} to="/DeletePateint">Delete Patient</Nav.Link>
-                  <Nav.Link as={Link} to="/signupmed">Add Medication</Nav.Link>
-                </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
-      ))}
-    </>
+    <Navbar expand="lg" className="">
+      <Container>
+        <Navbar.Brand href="#home">
+          <img
+            src={logo}
+            width={150}
+            height={150}
+            className="d-inline-block align-top"
+            alt="Logo"
+            style={{ marginRight: '10px' }} // Adjust the margin as needed
+          />
+
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/" style={{ color: 'black', fontSize: '20px', fontWeight: 'bold' }} >Pizza</Nav.Link>
+            <hr style={{color: 'black'}}/>
+            <Nav.Link href="/" style={{ color: 'black', fontSize: '20px', fontWeight: 'bold' }} >Pasta</Nav.Link>
+            <hr style={{color: 'black'}}/>
+
+            <Nav.Link href="/" style={{ color: 'black', fontSize: '20px', fontWeight: 'bold' }} >Deals</Nav.Link>
+            <hr style={{color: 'black'}}/>
+
+            <Nav.Link href="/" style={{ color: 'black', fontSize: '20px', fontWeight: 'bold' }} >Desserts</Nav.Link>
+            <hr style={{color: 'black'}}/>
+
+            <Nav.Link href="/" style={{ color: 'black', fontSize: '20px', fontWeight: 'bold' }} >Salad</Nav.Link>
+            <hr style={{color: 'black'}}/>
+
+            <Nav.Link href="/" style={{ color: 'black', fontSize: '20px', fontWeight: 'bold' }} >Drinks</Nav.Link>
+          </Nav>
+
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default OffcanvasExample;
+export default BasicExample;

@@ -1,0 +1,10 @@
+/* src/fonts.css */
+
+@font-face {
+    font-family: 'Nunito';
+    src: 
+         url('../../fonts/static/Nunito-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

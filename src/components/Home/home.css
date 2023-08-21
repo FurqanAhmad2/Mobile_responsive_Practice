@@ -1,9 +1,27 @@
-.main{
-  background-image: url("../../assets/background.jpg");
-  background-size: cover ;
-  background-repeat: no-repeat;
+
+.main {
+  background: linear-gradient(135deg, #009a49, #fff 50%, #ce1126);
+  background-size: 200% 200%;
+  animation: gradientAnimation 8s ease infinite;
   color: white;
+  font-family: 'Nunito', sans-serif; /* Use the custom font */
+  min-height: 100vh;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
 
 /* home.css */
 
@@ -11,8 +29,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  animation: slide-in 1s ease-out; /* Use the correct keyframes 'slide-in' */
-  margin-bottom: 5%;
+  animation: slide-in 1s ease-out;
+  /* Use the correct keyframes 'slide-in' */
+  margin-bottom: 1%;
 }
 
 @keyframes slide-in {
@@ -20,6 +39,7 @@
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -27,14 +47,18 @@
 }
 
 .logo {
-  width: 50px; /* Adjust the size of the logo as needed */
+  width: 80px;
+  /* Adjust the size of the logo as needed */
   height: auto;
-  margin-right: 1%; /* Add some space between the logo and text */
-  animation: slide-in-text 2s ease-out; /* Use the same animation as the text */
+  margin-right: 0%;
+  /* Add some space between the logo and text */
+  animation: slide-in-text 2s ease-out;
+  /* Use the same animation as the text */
 }
 
 .animated-text {
-  animation: slide-in-text 2s ease-out; /* Keep the existing animation for the text */
+  animation: slide-in-text 2s ease-out;
+  /* Keep the existing animation for the text */
 }
 
 @keyframes slide-in-text {
@@ -42,6 +66,7 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -53,14 +78,13 @@
   background-color: #000;
   background-image: none;
   border: 1px solid #000;
-  border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  border-radius: px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 20px;
   margin: 0 5px 10px 0;
@@ -73,6 +97,7 @@
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  width: 50%;
 }
 
 .button-50:focus {
@@ -97,29 +122,67 @@
   .button-50 {
     padding: 12px 50px;
   }
+
 }
-  
-  @media (max-width: 768px) {
+
+@media (max-width: 768px) {
+
+
+  .animation-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    animation: slide-in 1s ease-out;
+    /* Use the correct keyframes 'slide-in' */
+    margin-bottom: 10%;
+  }
+
+  .Menu-button {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
 
   }
 
+  .button-50 {
+    appearance: button;
+    background-color: #555454;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+  
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 80%;
+  }
 
- 
+
+}
 
 
 
-.Menu-button{
+.Menu-button {
   display: flex;
   flex-direction: column;
-  margin: 22%;
-
-}
-
-.btn-sign-in{
-  margin-top: 10%;
-}
-
-.btn-video{
-  margin-top: 10%;
+  margin: 2%;
+  margin-left: 20%;
 
 }
