@@ -47,13 +47,13 @@ function Home() {
       >
         <Navbar />
 
-        <h2 className="animated-text" style={{ paddingLeft: "3%", color: "black", fontWeight: "bolder" }}>
-          Speisekarte des Restaurants
+        <h2 className="animated-text" style={{ paddingLeft: "3%", color: "black", fontWeight: "bolder",margin:'4%' }}>
+        Willkommen im ROCCA-MENÜ
         </h2>
         <div className="animation-container">
           <img src={logo} alt="Logo" className={`logo ${animationComplete ? 'logo-animation' : ''}`} />
           <div className="animated-text" style={{ marginTop: "1%", color: "black", fontWeight: "bolder" }}>
-            Herzlich willkommen bei der Speisekarte des Restaurants. Bitte wählen Sie Ihre gewünschte Sprache
+          Willkommen im ROCCA-Menü. Bitte wählen Sie Ihre gewünschte Sprache aus
           </div>
         </div>
 

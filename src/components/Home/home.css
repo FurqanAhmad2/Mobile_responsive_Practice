@@ -1,9 +1,9 @@
 
 .main {
-  background: linear-gradient(135deg, #009a49, #fff 50%, #ce1126);
+  /* background: linear-gradient(135deg, #009a49, #fff 50%, #ce1126);
   background-size: 200% 200%;
   animation: gradientAnimation 8s ease infinite;
-  color: white;
+  color: white; */
   font-family: 'Nunito', sans-serif; /* Use the custom font */
   min-height: 100vh;
 }

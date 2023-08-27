@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { CartProvider } from './components/CartContext/CartContext'; // Import the CartProvider
+import CartComponent from './components/CartComponent/CartComponent'; // Import the CartComponent
 
 import Home from "./components/Home/Home";
 import EnglishMenu from './components/EnglishMenu/EnglishMenu';
@@ -19,35 +21,34 @@ import SaladEnglish from './components/SaladEnglish/SaladEnglish';
 import Biersorten from './components/BiersortenEnglish/biers';
 import DrinkSel from './components/DrinkSel/DrinkSel';
 import StartPage from './components/StartPage/StartPage';
-
-
+import Cart from './components/CartComponent/CartComponent';
 
 function App() {
   return (
     <Router>
+      <CartProvider> {/* Wrap your Router with CartProvider */}
         <Routes>
-        <Route path="/" element={<StartPage />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/EnglishMenu" element={<EnglishMenu />} />
-        <Route path="/PolishMenu" element={<PolishMenu />} />
-        <Route path="/ItalianMenu" element={<ItalianMenu />} />
-        <Route path="/FrenchMenu" element={<FrenchMenu />} />
-        <Route path="/SelectionMenu" element={<MainSelection />} />
-        <Route path="/EnglishPizzaNonVeg" element={<EnglishPizzaNonVeg />} />
-        <Route path="/EnglishPizzaVeg" element={<PizzaEnglishVeg />} />
-        <Route path="/EnglishPasta" element={<PastaEnglish />} />
-        <Route path="/VegSel" element={<VegSel />} />
-        <Route path="/DrinkSel" element={<DrinkSel />} />
-        <Route path="/EnglishDrinks" element={<EnglishDrinks />} />
-        <Route path="/FingerFoodEnglish" element={<FingerFoodEnglish />} />
-        <Route path="/EnglishDealsMenu" element={<EnglishDealsMenu />} />
-        <Route path="/EnglishDesserts" element={<DessertEnglish />} />
-        <Route path="/EnglishSalad" element={<SaladEnglish />} />
-        <Route path="/EnglishBeer" element={<Biersorten />} />
-        
-    
-       
-      </Routes>
+          <Route path="/" element={<StartPage />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/EnglishMenu" element={<EnglishMenu />} />
+          <Route path="/PolishMenu" element={<PolishMenu />} />
+          <Route path="/ItalianMenu" element={<ItalianMenu />} />
+          <Route path="/FrenchMenu" element={<FrenchMenu />} />
+          <Route path="/SelectionMenu" element={<MainSelection />} />
+          <Route path="/EnglishPizzaNonVeg" element={<EnglishPizzaNonVeg />} />
+          <Route path="/EnglishPizzaVeg" element={<PizzaEnglishVeg />} />
+          <Route path="/EnglishPasta" element={<PastaEnglish />} />
+          <Route path="/VegSel" element={<VegSel />} />
+          <Route path="/DrinkSel" element={<DrinkSel />} />
+          <Route path="/EnglishDrinks" element={<EnglishDrinks />} />
+          <Route path="/FingerFoodEnglish" element={<FingerFoodEnglish />} />
+          <Route path="/EnglishDealsMenu" element={<EnglishDealsMenu />} />
+          <Route path="/EnglishDesserts" element={<DessertEnglish />} />
+          <Route path="/EnglishSalad" element={<SaladEnglish />} />
+          <Route path="/EnglishBeer" element={<Biersorten />} />
+          <Route path="/Cart" element={<Cart />} />
+        </Routes>
+      </CartProvider>
     </Router>
   );
 }

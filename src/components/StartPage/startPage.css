@@ -1,0 +1,8 @@
+.page{
+    background-image: url("../../assets/Flag_of_Italy_and_Germany.svg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif; /* Use the custom font */
+
+}

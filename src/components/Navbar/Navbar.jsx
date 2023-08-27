@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from "../../assets/crop.png";
+import logo from "../../assets/rooca.jpeg";
 
 function BasicExample() {
   return (
@@ -13,7 +13,7 @@ function BasicExample() {
           <img
             src={logo}
             width={150}
-            height={150}
+            height={80}
             className="d-inline-block align-top"
             alt="Logo"
             style={{ marginRight: '10px' }} // Adjust the margin as needed
